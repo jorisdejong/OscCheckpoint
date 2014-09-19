@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="XdDods" name="OscCheckpoint" projectType="guiapp" version="0.0.1"
+              bundleIdentifier="com.yourcompany.OscCheckpoint" includeBinaryInAppConfig="1"
+              jucerVersion="3.1.0">
+  <MAINGROUP id="u91VKj" name="OscCheckpoint">
+    <GROUP id="{970C8520-BE5E-1260-A3E5-BC2759C056BE}" name="Source">
+      <GROUP id="{E6189DF8-FDBF-085A-C3EA-2F16AEEDF725}" name="oscpack">
+        <GROUP id="{6E5D906C-E2BD-1766-CCC0-1C8B52AE6859}" name="ip">
+          <FILE id="tFEmmp" name="PacketListener.h" compile="0" resource="0"
+                file="Source/oscpack/ip/PacketListener.h"/>
+        </GROUP>
+        <GROUP id="{BC6EC109-11F7-F6A0-F5DF-00806E4640A7}" name="osc">
+          <FILE id="f0w8sy" name="MessageMappingOscPacketListener.h" compile="0"
+                resource="0" file="Source/oscpack/osc/MessageMappingOscPacketListener.h"/>
+          <FILE id="oXGefj" name="OscException.h" compile="0" resource="0" file="Source/oscpack/osc/OscException.h"/>
+          <FILE id="lrreTn" name="OscHostEndianness.h" compile="0" resource="0"
+                file="Source/oscpack/osc/OscHostEndianness.h"/>
+          <FILE id="xu0LBY" name="OscOutboundPacketStream.cpp" compile="1" resource="0"
+                file="Source/oscpack/osc/OscOutboundPacketStream.cpp"/>
+          <FILE id="peAE8q" name="OscOutboundPacketStream.h" compile="0" resource="0"
+                file="Source/oscpack/osc/OscOutboundPacketStream.h"/>
+          <FILE id="dDFtas" name="OscPacketListener.h" compile="0" resource="0"
+                file="Source/oscpack/osc/OscPacketListener.h"/>
+          <FILE id="vf3t4b" name="OscPrintReceivedElements.cpp" compile="1" resource="0"
+                file="Source/oscpack/osc/OscPrintReceivedElements.cpp"/>
+          <FILE id="QuP5r6" name="OscPrintReceivedElements.h" compile="0" resource="0"
+                file="Source/oscpack/osc/OscPrintReceivedElements.h"/>
+          <FILE id="KtTdM3" name="OscReceivedElements.cpp" compile="1" resource="0"
+                file="Source/oscpack/osc/OscReceivedElements.cpp"/>
+          <FILE id="l8HhTy" name="OscReceivedElements.h" compile="0" resource="0"
+                file="Source/oscpack/osc/OscReceivedElements.h"/>
+          <FILE id="YLXmMz" name="OscTypes.cpp" compile="1" resource="0" file="Source/oscpack/osc/OscTypes.cpp"/>
+          <FILE id="IGwFyt" name="OscTypes.h" compile="0" resource="0" file="Source/oscpack/osc/OscTypes.h"/>
+        </GROUP>
+      </GROUP>
+      <FILE id="d1kxw3" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
+      <FILE id="SxvRw9" name="MainComponent.cpp" compile="1" resource="0"
+            file="Source/MainComponent.cpp"/>
+      <FILE id="uvEhtA" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
+      <FILE id="pc8I3P" name="OscListener.cpp" compile="1" resource="0" file="Source/OscListener.cpp"/>
+      <FILE id="kccGM1" name="OscListener.h" compile="0" resource="0" file="Source/OscListener.h"/>
+      <FILE id="v7XzgQ" name="OscMessage.h" compile="0" resource="0" file="Source/OscMessage.h"/>
+      <FILE id="J07AeO" name="OscSender.cpp" compile="1" resource="0" file="Source/OscSender.cpp"/>
+      <FILE id="Nd0AUV" name="OscSender.h" compile="0" resource="0" file="Source/OscSender.h"/>
+    </GROUP>
+  </MAINGROUP>
+  <EXPORTFORMATS>
+    <XCODE_MAC targetFolder="Builds/MacOSX">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" osxSDK="default" osxCompatibility="default" osxArchitecture="default"
+                       isDebug="1" optimisation="1" targetName="OscCheckpoint"/>
+        <CONFIGURATION name="Release" osxSDK="default" osxCompatibility="default" osxArchitecture="default"
+                       isDebug="0" optimisation="2" targetName="OscCheckpoint"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_core" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_cryptography" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_video" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_opengl" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../JUCE/modules"/>
+      </MODULEPATHS>
+    </XCODE_MAC>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULES id="juce_audio_basics" showAllCode="1" useLocalCopy="1"/>
+    <MODULES id="juce_audio_devices" showAllCode="1" useLocalCopy="1"/>
+    <MODULES id="juce_audio_formats" showAllCode="1" useLocalCopy="1"/>
+    <MODULES id="juce_audio_processors" showAllCode="1" useLocalCopy="1"/>
+    <MODULES id="juce_core" showAllCode="1" useLocalCopy="1"/>
+    <MODULES id="juce_cryptography" showAllCode="1" useLocalCopy="1"/>
+    <MODULES id="juce_data_structures" showAllCode="1" useLocalCopy="1"/>
+    <MODULES id="juce_events" showAllCode="1" useLocalCopy="1"/>
+    <MODULES id="juce_graphics" showAllCode="1" useLocalCopy="1"/>
+    <MODULES id="juce_gui_basics" showAllCode="1" useLocalCopy="1"/>
+    <MODULES id="juce_gui_extra" showAllCode="1" useLocalCopy="1"/>
+    <MODULES id="juce_opengl" showAllCode="1" useLocalCopy="1"/>
+    <MODULES id="juce_video" showAllCode="1" useLocalCopy="1"/>
+  </MODULES>
+  <JUCEOPTIONS/>
+</JUCERPROJECT>
