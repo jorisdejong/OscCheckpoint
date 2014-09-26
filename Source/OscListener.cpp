@@ -20,17 +20,6 @@ OscListener::OscListener ( int p ) : Thread ("OscListener thread"), port ( p )
     blacklist.add("/activeclip/");
     blacklist.add("/connectclip");
     
-
-
-    sendOpacity(true);
-    sendTriggers(true);
-    sendPlayhead(false);
-
-
-    
-    
-    //create oscsender
-    //oscSender = new OscSender();
 }
 
 OscListener::~OscListener()
