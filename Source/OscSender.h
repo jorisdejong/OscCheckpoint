@@ -23,7 +23,7 @@
 class OscSender : public DatagramSocket 
 {
 public:
-    OscSender();
+    OscSender(IPAddress ip);
     ~OscSender();
     
     void setOscOutputSocket();

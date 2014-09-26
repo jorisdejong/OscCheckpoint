@@ -30,6 +30,8 @@ public:
     void sendOpacity ( bool send );
     void sendTriggers ( bool send );
     void sendPlayhead ( bool send );
+    void sendClears ( bool send );
+    void sendEverything ( bool send );
     
     OwnedArray<OscSender> oscSenders;
     
@@ -42,7 +44,7 @@ private:
     
     Array <String> blacklist;
     Array <String> whitelist;
-
+    bool openEverything;
     
 };
 

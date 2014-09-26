@@ -19,7 +19,7 @@ OscListener::OscListener ( int p ) : Thread ("OscListener thread"), port ( p )
     blacklist.add("/activelayer/");
     blacklist.add("/activeclip/");
     blacklist.add("/connectclip");
-    //blacklist.add("/clear");
+    
 
 
     sendOpacity(true);
@@ -74,15 +74,26 @@ void OscListener::sendTriggers(bool send)
 {
     if ( send)
     {
-        whitelist.add("/clear");
         whitelist.add("/connect");
     }
     else
     {
-        whitelist.removeAllInstancesOf("/clear");
         whitelist.removeAllInstancesOf("/connect");
     }
         
+}
+
+void OscListener::sendClears(bool send)
+{
+    if ( send)
+    {
+        whitelist.add("/clear");
+    }
+    else
+    {
+        whitelist.removeAllInstancesOf("/clear");
+    }
+    
 }
 
 void OscListener::sendPlayhead(bool send)
@@ -95,6 +106,10 @@ void OscListener::sendPlayhead(bool send)
     {
          whitelist.removeAllInstancesOf("/video/position/values");
     }
+}
+void OscListener::sendEverything(bool send)
+{
+    openEverything = send;
 }
 
 
@@ -148,7 +163,7 @@ void OscListener::run()
    
                 //if the message is not on the blackllist
                 //but it is included in the whitelist
-                if ( !onBlacklist && onWhitelist )
+                if ( (!onBlacklist && onWhitelist) || openEverything )
                 {
                     osc::ReceivedMessageArgumentStream args = m.ArgumentStream();
                     OscMessage* m = new OscMessage();

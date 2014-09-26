@@ -27,16 +27,19 @@ public:
     ~MainContentComponent();
 
     void resized();
+    void paint(Graphics &g);
     
-    void textEditorTextChanged (TextEditor& te);
+   // void textEditorTextChanged (TextEditor& te);
+    void textEditorReturnKeyPressed ( TextEditor& te);
     void buttonClicked(Button* b);
     
-    void addIpLine();
+    void addIpLine(String ip);
     void removeIpLine(int i);
 
 private:
     
     OwnedArray <TextButton> enableWhitelist;
+    ScopedPointer<TextEditor> enterIp;
     OwnedArray <TextEditor> ips;
     OwnedArray <Label> ipLabels;
     OwnedArray <TextButton> removeIps;

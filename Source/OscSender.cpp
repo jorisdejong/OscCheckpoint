@@ -10,9 +10,9 @@
 
 #include "OscSender.h"
 
-OscSender::OscSender() : DatagramSocket (7001, false)
+OscSender::OscSender(IPAddress ip) : DatagramSocket (7001, false)
 {
-    setIp(IPAddress::local());
+    setIp(ip);
     messages.clear();
 }
 
@@ -56,7 +56,7 @@ void OscSender::sendOsc()
     osc::OutboundPacketStream m( buffer, OUTPUT_BUFFER_SIZE );
     
     //format the bundle, using oscpack library
-    m << osc::BeginBundle();
+    //m << osc::BeginBundle();
     for(int i = 0; i < messages.size(); i++)
     {
         
@@ -66,18 +66,17 @@ void OscSender::sendOsc()
                 m << osc::BeginMessage( messages[i].address.toRawUTF8() ) << messages[i].floatValue << osc::EndMessage ;
             if(messages[i].type == "i")
                 m << osc::BeginMessage( messages[i].address.toRawUTF8() ) << messages[i].intValue << osc::EndMessage ;
+            
+            //send bundle.
+            if ( waitUntilReady(false, 3000) == 1 && m.Size() > 0)
+            {
+                int bytesWritten = write(m.Data(), m.Size());
+                if( messages.size() > 0 )
+                    messages.clear();
+            }
         }
     }
-    m << osc::EndBundle;
+    //m << osc::EndBundle;
    
-    //send bundle.
-    if ( waitUntilReady(false, 3000) == 1 && m.Size() > 0)
-    {
-        int bytesWritten = write(m.Data(), m.Size());
-        if ( bytesWritten == m.Size() && bytesWritten != 0)
-        {
-            if( messages.size() > 0 )
-                messages.clearQuick();
-        }
-    }
+
 }

@@ -6,22 +6,30 @@
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>6DC6DBF8-1045-493C-BE04-D077A71F44E7</string>
+	<key>IDESourceControlProjectName</key>
+	<string>OscCheckpoint</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>0D1BD77429497EDCE7DBECD7D91F529BCF40B956</key>
 		<string>https://github.com/jorisdejong/KBKontroller.git</string>
+		<key>3FF0DD6DBFD0855BED4995FCA3CDCBBE568F777F</key>
+		<string>https://github.com/jorisdejong/OscCheckpoint.git</string>
 	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Builds/MacOSX/OscCheckpoint.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>0D1BD77429497EDCE7DBECD7D91F529BCF40B956</key>
-		<string>KBKontroller/</string>
+		<string>../../../../../KBKontroller</string>
+		<key>3FF0DD6DBFD0855BED4995FCA3CDCBBE568F777F</key>
+		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/jorisdejong/KBKontroller.git</string>
+	<string>https://github.com/jorisdejong/OscCheckpoint.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>0D1BD77429497EDCE7DBECD7D91F529BCF40B956</string>
+	<string>3FF0DD6DBFD0855BED4995FCA3CDCBBE568F777F</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -31,6 +39,14 @@
 			<string>0D1BD77429497EDCE7DBECD7D91F529BCF40B956</string>
 			<key>IDESourceControlWCCName</key>
 			<string>KBKontroller</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3FF0DD6DBFD0855BED4995FCA3CDCBBE568F777F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>OscCheckpoint</string>
 		</dict>
 	</array>
 </dict>
